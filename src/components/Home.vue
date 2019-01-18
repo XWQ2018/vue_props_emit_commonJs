@@ -79,8 +79,6 @@ export default {
     //点击按钮通过ref获取children的信息
     btnChildren(){
         console.log(this.$refs.childrenInfo)
-        // console.log(this.$commonJs.randowNumber())
-        // console.log(this.$commonJs.wipeRepeat([1,2,3,1,2,3]))
         console.log(this.$commonJs.typeJudge({}))
 
     },
