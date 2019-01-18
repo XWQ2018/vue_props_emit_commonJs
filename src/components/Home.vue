@@ -7,7 +7,7 @@
         //- input(v-model="msg" style="marginTop:20px")
         //- .countTime
         //-   .Time(v-if="isShow" style="marginTop:20px") {{time + 's刷新页面'}} -->
-        <children @childrenMsg='childrenMsg' ref='childrenInfo'></children>        
+        <children @childrenMsg='childrenMsg' ref='childrenInfo' :status='isShow'></children>        
         <ul class="list">
             <li v-for="(item,key) in list" :key='key' @click='toRouter(item.name)'>{{item.name}}</li>
         </ul>

@@ -6,6 +6,11 @@
 </template>
 <script>
 export default {
+    props:{
+        status:{
+            type:Boolean,
+        }
+    },
     data(){
         return{
             msg:'我是children页面',

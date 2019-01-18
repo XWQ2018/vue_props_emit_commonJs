@@ -65,12 +65,10 @@ export default {
       // this.$route.goback(-1)
     },
     getStuGroupStuList(params){
-        // return new Promise(resolve => {
             this.$axios.post('/edu/stu/match/groupStuList', qs.stringify(params))
               .then(data => {
                 // resolve(console.log(data))
             })
-        // })
     },
     countAdd:function(){
       let self =this;
@@ -90,10 +88,9 @@ export default {
         }
         arr.forEach(item=>{
           let test = Object.values(item);
-          console.log(test)
           if(Object.values(item).includes('安')){
             this.result.push(item)
-            console.log(Object.values(item))
+            // console.log(Object.values(item))
           }
         })
     }
