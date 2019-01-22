@@ -7,15 +7,20 @@ export default {
         return res;
     },
     //引用数据类型判断
-    typeJudge(arr){
-        //使用arr instance type 或者 type==arr.constructor进行判断也可以
-        let res = Object.prototype.toString.call(arr).slice(8,-1)
-        return res;
-        // if(typeof arr ==='object' && arr instanceof Array){
+    arrTypeJudge(obj){
+        //使用arr instanceof type 或者 type==arr.constructor进行判断也可以
+        let res = Object.prototype.toString.call(obj).slice(8,-1)
+        return res==='Array' ? true : false;
+        // if(typeof obj ==='object' && obj instanceof Array){
         //     return 'array';
-        // }else if(typeof arr ==='object' && arr instanceof Object){
+        // }else if(typeof obj ==='object' && obj instanceof Object){
         //     return 'object';
         // }
+    },
+    objectTypeJudge(obj){
+        //使用arr instanceof type 或者 type==arr.constructor进行判断也可以
+        let res = Object.prototype.toString.call(obj).slice(8,-1)
+        return res==='Object' ? true : false;
     },
     //Array去重
     wipeRepeat(arr){

@@ -79,7 +79,7 @@ export default {
     //点击按钮通过ref获取children的信息
     btnChildren(){
         console.log(this.$refs.childrenInfo)
-        console.log(this.$commonJs.typeJudge({}))
+        console.log(this.$commonJs.objectTypeJudge({}))
 
     },
     toRouter(to){

@@ -9,13 +9,13 @@ export default {
     props:{
         status:{
             type:Boolean,
+            default:1,
         }
     },
     data(){
         return{
             msg:'我是children页面',
             list:'要传的值',
-            status:1,
             dataList:[]
         }
     },
