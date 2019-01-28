@@ -1,17 +1,20 @@
 <template>
     <div>
-        <h3>我是children页面</h3>
+        <h5>我是children页面</h5>
         <input type="text" v-model='msg' @watchMethod='msg' v-if="status==0 || status==1 ? true :false">
     </div>
 </template>
 <script>
+import Vue from 'vue';
 export default {
+    aa:Vue.mixin({
     props:{
         status:{
-            type:Boolean,
+            type:Number,
             default:1,
         }
     },
+    
     data(){
         return{
             msg:'我是children页面',
@@ -20,10 +23,10 @@ export default {
         }
     },
     computed:{
-
+        
     },
     mounted(){
-
+        console.log(this.$options)
     },
     methods:{
 
@@ -35,6 +38,6 @@ export default {
             this.$emit('childrenMsg',this.msg)
         }
     }
-
+})
 }
 </script>

@@ -12,6 +12,7 @@
             <li v-for="(item,key) in list" :key='key' @click='toRouter(item.name)'>{{item.name}}</li>
         </ul>
         <button @click='btnChildren'>获取children的信息</button>
+        <button @click='cacheData'>存储或获取本地缓存的信息</button>
         <main class="container">
             <router-view/>
         </main>
@@ -28,7 +29,7 @@ export default {
       flag:false,
       value3:null,
       time:3,
-      isShow:true,
+      isShow:1,
       list:[
         {
           name:'Home',
@@ -71,6 +72,10 @@ export default {
     //   },1000)
 
     // },
+    //获取或者存储本地缓存
+    cacheData(){
+        this.$commonJs.clearCache('sessionInfo')
+    },
 
     //接收子组件传过来的值
     childrenMsg(val){

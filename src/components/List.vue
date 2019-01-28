@@ -62,7 +62,9 @@ export default {
   methods:{
     goback(){
       console.log(window.location.hash)
-      // this.$route.goback(-1)
+      this.$router.push({
+          path:'/home'
+      })
     },
     getStuGroupStuList(params){
             this.$axios.post('/edu/stu/match/groupStuList', qs.stringify(params))
