@@ -7,14 +7,12 @@
 <script>
 import Vue from 'vue';
 export default {
-    aa:Vue.mixin({
     props:{
         status:{
             type:Number,
             default:1,
         }
     },
-    
     data(){
         return{
             msg:'我是children页面',
@@ -38,6 +36,5 @@ export default {
             this.$emit('childrenMsg',this.msg)
         }
     }
-})
 }
 </script>
