@@ -1,3 +1,8 @@
+<!--
+ * @Description: 列表页
+ * @Author: xwq
+ * @Date: 2019-01-18 15:40:09
+ -->
 <template lang="pug">
   .List
     .head
