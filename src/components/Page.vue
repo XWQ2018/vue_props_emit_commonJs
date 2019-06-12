@@ -66,9 +66,11 @@ export default {
             date: "2018年12月26日"
         };
     },
+    created() {},
+    mounted() {},
     filters: {
         dateFormate(value) {
-            console.log(value);
+            // console.log(value);
             return value.substr(2);
         }
     }
@@ -76,5 +78,4 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang='stylus'>
-</style>
+<style lang='less'></style>
